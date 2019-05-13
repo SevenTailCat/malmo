@@ -60,17 +60,17 @@ We're building up a [Troubleshooting](https://github.com/Microsoft/malmo/wiki/Tr
 
 ## Launching Minecraft with our Mod: ##
 
-Minecraft needs to create windows and render to them with OpenGL, so the machine you do this from must have a desktop environment.
+Minecraft需要有可视化窗口或者OpenGL，所以运行此项目的机器需要有可视化桌面。
 
-Go to the folder where you unzipped the release, then:
+在解压这个项目的文件夹里执行:
 
 `cd Minecraft`  
 `launchClient` (On Windows)  
 `./launchClient.sh` (On Linux or MacOSX)
 
-or, e.g. `launchClient -port 10001` to launch Minecraft on a specific port.
+或使用`launchClient -port 10001`来以一个特殊的端口启动Minecraft。
 
-on Linux or MacOSX: `./launchClient.sh -port 10001`
+在 Linux 或者 MacOSX 上: `./launchClient.sh -port 10001`
 
 *NB: If you run this from a terminal, the bottom line will say something like "Building 95%" - ignore this - don't wait for 100%! As long as a Minecraft game window has opened and is displaying the main menu, you are good to go.*
 
