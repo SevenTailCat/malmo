@@ -1,31 +1,30 @@
 # Malmö #
-（本文翻译仅供参考，若有偏差，不代表原作者意思。欢迎大家前来帮助这个英语渣还想推广自己喜欢平台的傻孩子。欢迎投稿B站视频教程。）
-Project Malmö is a platform for Artificial Intelligence experimentation and research built on top of Minecraft. We aim to inspire a new generation of research into challenging new problems presented by this unique environment.
+（本文翻译仅供参考，若有偏差，不代表原作者意思。欢迎大家前来帮助这个英语渣还想推广自己喜欢平台的傻孩子。欢迎投稿B站视频教程。）  
+原文：[通道-》](https://github.com/microsoft/malmo)
+Malmö项目是一个建立在Minecraft之上的人工智能实验和研究平台。我们的目标是激发新一代研究，以应对这一独特环境带来的新的挑战性问题。
 
 [![Join the chat at https://gitter.im/Microsoft/malmo](https://badges.gitter.im/Microsoft/malmo.svg)](https://gitter.im/Microsoft/malmo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/Microsoft/malmo.svg?branch=master)](https://travis-ci.org/Microsoft/malmo) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/Microsoft/malmo/blob/master/LICENSE.txt)
 ----
     
-## Getting Started ##
+## 开始吧 ##
 
 ### *** NEW  *** ###
 
 MamloEnv implements an Open AI "gym"-like environment directly in Python (one to one in a side-car like pattern with Java Minecraft). If you only need this functionallity or are interested in trying it out then please see [MalmoEnv](https://github.com/Microsoft/malmo/tree/master/MalmoEnv). Otherwise either install the "Malmo native wheel" (if available for your platform) or a binary release (more below). The build has been simplified with less required dependencies so building Malmo yourself is always an option!
 
-Advantages:
+优点:
     
-1. No native code - you don't have to build or install platform dependent code.
-2. A single network connection is used to run missions. No dynamic ports means it's more virtualization friendly.
-3. A simpler multi-agent coordination protocol. 
-One Minecraft client instance, one single port is used to start missions.
+1. 没有本地代码 - 您无需构建或安装平台相关代码。
+2. 用于执行任务的单个网络连接。没有动态端口意味着它对虚拟化。
+3. 一种更简单的多代理协调协议。一个Minecraft客户端实例，一个端口用于启动任务。
 4. Less impedance miss-match with the gym api.
 
-Disadvantages:
+缺点:
 
-1. The existing Malmo examples are not supported (as API used is different). 
-Marlo envs should work with this [port](https://github.com/AndKram/marLo/tree/malmoenv).
-2. The API is more limited (e.g. selecting video options) - can edit mission xml directly.
+1. 不支持现有的Marlo示例 (因为API不同了)。 Marlo envs应该使用这个[端口](https://github.com/AndKram/marLo/tree/malmoenv).
+2. API更受限制（例如选择视频选项） - 可以直接编辑任务xml.
 
-Note: The Marlo competition (for now) uses the original Malmo "AgentHost" api with it's native code implementation. 
+注意: The Marlo competition (for now) uses the original Malmo "AgentHost" api with it's native code implementation. 
 
 ### Malmo as a native Python wheel ###
 
@@ -84,32 +83,32 @@ a machine for network use these TCP ports should be open.
 
 ----
 
-## Launch an agent: ##
+## 启动一个代理: ##
 
-#### Running a Python agent: ####
+#### 运行一个Python代理: ####
 
 ```
 cd Python_Examples
 python3 run_mission.py
 ``` 
 
-#### Running a C++ agent: ####
+#### 运行一个C++代理: ####
 
 `cd Cpp_Examples`
 
-To run the pre-built sample:
+运行一个预先构建的样本:
 
 `run_mission` (on Windows)  
 `./run_mission` (on Linux or MacOSX)
 
-To build the sample yourself:
+构建一个你自己的样例:
 
 `cmake .`  
 `cmake --build .`  
 `./run_mission` (on Linux or MacOSX)  
 `Debug\run_mission.exe` (on Windows)
 
-#### Running a C# agent: ####
+#### 运行一个C#代理: ####
 
 To run the pre-built sample (on Windows):
 
@@ -122,19 +121,19 @@ Or from the command-line:
 
 `cd CSharp_Examples`
 
-Then, on Windows:  
+然后, on Windows:  
 ```
 msbuild RunMission.csproj /p:Platform=x64
 bin\x64\Debug\CSharpExamples_RunMission.exe
 ```
 
-#### Running a Java agent: ####
+#### 启动一个JAVA代理: ####
 
 `cd Java_Examples`  
 `java -cp MalmoJavaJar.jar:JavaExamples_run_mission.jar -Djava.library.path=. JavaExamples_run_mission` (on Linux or MacOSX)  
 `java -cp MalmoJavaJar.jar;JavaExamples_run_mission.jar -Djava.library.path=. JavaExamples_run_mission` (on Windows)
 
-#### Running an Atari agent: (Linux only) ####
+#### 启动一个Atari代理: (Linux only) ####
 
 ```
 cd Python_Examples
